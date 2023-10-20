@@ -24,7 +24,7 @@ function sonIguales(elemento1, elemento2) {
   // Devuelve "true" si "elemento1" y "elemento2" son estrictamente iguales
   // De lo contrario, devuelve "false"
   //↓↓↓ Tu código: ↓↓↓ */
-  return elemento1 === elemento2
+  return elemento1 === elemento2;
 }
 
 function tienenMismaLongitud(str1, str2) {
@@ -102,7 +102,7 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Lionel", "Messi" -> "Lionel Messi"
   // Tu código:
-  
+  return `${nombre} + " " + ${apellido}`
 }
 
 function obtenerSaludo(nombre) {
@@ -110,21 +110,21 @@ function obtenerSaludo(nombre) {
   // "Exequiel" -> "Hola Exequiel!"
   //PISTA: debes concatenar palabras, espacios y el signo !
   // Tu código:
-  
+  return `Hola + ${nombre} +!`;
 }
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-  
+  return `${str}!`
 }
 
 function deEuroAdolar(euro) {
   /*  Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   como parámetro un número de euros y calcule el cambio en dólares. "suponiendo que vale 1.20"
   Escribe tu código aquí */
-  
+  return euro * 1.20 
 }
 
 function esVocal(letra) {
@@ -133,13 +133,16 @@ function esVocal(letra) {
   que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   Si no es vocal, tambien debe devolver "Dato incorrecto".
   Escribe tu código aquí */
-
+  if (a === letra) {
+    return true
+  } else false 
 }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
+  return true === numero
 
 }
 
@@ -147,6 +150,9 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (numero < 50, 20) {
+    return true
+  } else false 
 
 }
 
@@ -158,7 +164,23 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
 
+
+if (num1 > num2 && num1 > num3) {
+  return "Número 1 es mayor y positivo";
 }
+if (num1 < 0 || num2 < 0 || num3 < 0) {
+  return "Hay negativos";
+}
+if (num3 > num1 && num3 > num2) {
+  return num3 + 1;
+}
+if (num1 === 0 || num2 === 0 || num3 === 0) {
+  return "Error";
+}
+return false;
+
+
+
 
 function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
@@ -314,4 +336,4 @@ module.exports = {
   mesesDelAño,
   elementosMayores,
   mayorACien,
-};
+}}
